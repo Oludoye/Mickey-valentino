@@ -1,0 +1,259 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #965a7fc0;
+  color: #080000;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  background: #92396d;
+  color: rgb(17, 5, 5);
+  font-size: 20px;
+  padding: 0px;
+  text-align: center;
+  border-radius: 10px;
+  z-index: 1000;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  padding: 20px;
+}
+
+.item {
+  background: rgb(235, 230, 230);
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+@media(max-width:768px) {
+  .item img{
+    width: 60%;
+    height: 60%;
+  }
+  header {
+  position:relative;
+  top: 0;
+  padding: 0px;
+  text-align: center;
+  border-radius: 10px;
+  z-index: 1000;
+}
+.modal {
+  display: none;
+  position: fixed;
+  left: 0; top: 20%;
+  width: 70%;
+  height: 70%;
+  background-color: rgba(0,0,0,0.6);
+}
+  .modal-content {
+    width: 90%;
+    max-width: 400px;
+  }
+  .modal-img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media(max-width:768px) {
+  .logo{
+  font-size: 15px;
+  font-weight: bold;
+  font-family: 'Georgia', serif;
+  color: black;
+}}
+
+@media(max-width:480px) {
+  .item img{
+    width: 30%;
+    height: 30%;
+  }
+  .modal {
+  display: none;
+  position: fixed;
+  left: 0; top: 20%;
+  width: 30%;
+  height: 30%;
+  background-color: rgba(0,0,0,0.6);
+}
+  .modal-content {
+    width: 90%;
+    max-width: 300px;
+  }
+  .modal-img {
+    width: 100%;
+    height: auto;
+  }
+  button {
+    display: none;
+}}
+
+.item img {
+  max-width: 100%;
+  height: 60%;
+  border-radius: 6px;
+}
+
+.cart-section {
+   padding: 30px;
+  background: #d6bed0;
+  border-top: 2px solid #b470a0;
+  text-align: center;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0; top: 10%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+  position: relative;
+  top: 0; left: 0;
+  background: #ebdae7;
+  margin: 5% auto;
+  padding: 20px;
+  width: 70%;
+  max-width: 300px;
+  
+  border-radius: 10px;
+  text-align: center;
+}
+
+.modal-img {
+  width: 80%;
+  max-width: 200px;
+  height: auto;
+  border-radius: 10px;
+}
+button {
+  background-color: #000;
+  color: white;
+  border: none;
+  padding: 10px;
+  margin-top: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #444;
+}
+
+.close {
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+/* NAVBAR */
+.navbar {
+  background-color: #b8338b;
+  color: white;
+  padding: 20px 30px;
+ /* position: sticky;
+  top: 0;
+  z-index: 1000;*/
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: bold;
+  font-family: 'Georgia', serif;
+  color: black;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 12px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+  background-color: white;
+  color: #b8338b;
+  border-radius: 6px;
+}
+
+.hamburger {
+  display: block;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }}
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #b8338b;
+    margin-top: 10px;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background: #000;
+  color: white;
+}
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #e274b1;
+  color: white;
+  padding: 12px 18px;
+  font-weight: bold;
+  border-radius: 30px;
+  text-decoration: none;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+
+.whatsapp-float:hover {
+  background-color: #531d3f;
+}

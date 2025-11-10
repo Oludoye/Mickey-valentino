@@ -1,0 +1,252 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+
+.marquee-container {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  position: relative; 
+  z-index: 100;
+  top: -15vh;
+}
+
+.marquee {
+  width: 100%;
+  background-color: black;
+  color: white;
+  padding: 10px 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.marquee-content {
+  display: inline-block;
+  padding-left: 100%;
+  white-space: nowrap;
+  animation: marquee 15s linear infinite;
+  pointer-events: none; 
+
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+.marquee-container:hover .marquee {
+  background-color: #360805;
+}
+
+.marquee-container:hover .marquee-content {
+  animation-play-state: paused;
+}
+
+header {
+  background-color: #b8338b;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+
+.back-link {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.cart-container {
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+#cart-items {
+  list-style: none;
+  padding: 0;
+}
+
+#cart-items li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+  padding: 15px 0;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.cart-img {
+  width: 70px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.cart-details {
+  flex: 1;
+}
+
+.cart-name {
+  font-weight: bold;
+}
+
+.cart-price {
+  color: #b8338b;
+}
+
+.qty-control {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.qty-control button {
+  padding: 5px 10px;
+  background-color: #b8338b;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.remove-btn {
+  background-color: crimson;
+  color: white;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.remove-btn:hover {
+  background-color: darkred;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+#checkout-btn, #reset-btn {
+  background-color: #b8338b;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+#checkout-btn:hover, #reset-btn:hover {
+  background-color: #8e266d;
+}
+
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin-top: 30px;
+}
+.navbar {
+  background-color: #b8338b;
+  color: white;
+  padding: 20px 30px;
+  position: sticky;
+  top: 0;
+
+  z-index: 1000;
+
+}
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 12px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+  background-color: white;
+  color: #b8338b;
+  border-radius: 6px;
+}
+
+.hamburger {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+.nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 30px;
+    left: 30%;
+    width: 50%;
+    background-color: #b8338b;
+    padding: 20px;
+  }
+    .nav-links.show {
+        display: flex;
+   }
+
+    .nav-links a {
+        padding: 10px;
+        text-align: center;}
+    header {
+        display: block;
+        position: relative;
+        padding: 20px 30px;
+        font-size: smaller;
+        justify-content: space-evenly;
+    
+    }}
+
+@media (max-width: 768px) {
+  .marquee {
+    padding: 8px 0;
+    font-size: 14px; 
+    top: 10px;
+  }
+  
+  .marquee-content {
+    animation-duration: 15s; 
+    padding-left: 120%; 
+  }
+
+  @media (hover: none) {
+    .marquee-container:hover .marquee {
+      background-color: #ff4136; 
+    }
+  }
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>M.V LookBook Fashion House </title>
+  <link rel="stylesheet" href="collectionstyle.css">
+</head>
+<body>
+ <header class="navbar">
+  <div class="nav-container">
+    <div class="logo"> <h1>Mickey Valentino</h1>
+    <p>Your Ultimate Look Book</p></div>
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="testimonials.html">Testimonials</a>
+      <a href="cart-index.html">Cart</a>
+      <a href="shop index1.html">shop</a>
+      <a href="mailto:yourfashionhouse@gmail.com">Contact</a>
+    </nav>
+  </div>
+</header>
+
+  <main>
+    <section class="gallery" id="gallery"></section>
+
+    <section class="cart-section">
+      <h2>🛒 Cart</h2>
+      <ul id="cart-items"></ul>
+      <p><strong>Total:</strong> $<span id="total">0</span></p>
+      <button id="order-btn">Place Order</button>
+    </section>
+  </main>
+
+  <!-- Product Modal -->
+  <div id="productModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <img id="modalImg" class="modal-img" src="" alt="Product Image">
+      <h2 id="modalTitle"></h2>
+      <p id="modalDesc"></p>
+      <label for="size">Size:</label>
+      <select id="modalSize">
+        <option>Small</option>
+        <option>Medium</option>
+        <option>Large</option>
+      </select>
+
+      <label for="color">Color:</label>
+      <select id="modalColor">
+        <option>Red</option>
+        <option>Black</option>
+        <option>Blue</option>
+      </select>
+
+      <br><br>
+      <button><a href="shop index1.html" id="order-btn">Go To Shop</a></button>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 Mickey Valentino Fashion House</p>
+    <a href="https://wa.me/2348012345678?text=Hi%20Unisex%20Fashion%20House%2C%20I'm%20interested%20in%20placing%20an%20order!" class="whatsapp-float" target="_blank">💬 Chat on WhatsApp</a>
+    <p>📧 <a href="mailto:yourfashionhouse@gmail.com?subject=Order%20Inquiry">Email Us</a></p>
+  </footer>
+
+  <script src="collectionscript.js"></script>
+</body>
+</html>

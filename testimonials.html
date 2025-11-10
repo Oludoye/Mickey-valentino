@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mickey Valentino Customers Reviews</title>
+  <link rel="stylesheet" href="testimonialstyle.css" />
+</head>
+<body>
+  <header class="testimonial-header">
+    <h1>💬 What Our Customers Say</h1>
+    <p>Real reviews from real fashion lovers</p>
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="collection.html">LookBook/Collection</a>
+      <a href="cart-index.html">Cart</a>
+      <a href="shop index1.html">shop</a>
+      <a href="mailto:yourfashionhouse@gmail.com">Contact</a>
+    </nav>
+  </header>
+      <section>
+            <a href="shop index1.html" class="marquee-container">
+                <div class="marquee">
+                    <div class="marquee-content">
+                        📢 FLASH SALE! 70% OFF EVERYTHING – TODAY ONLY! 📢
+                        📢 FLASH SALE! 70% OFF EVERYTHING – TODAY ONLY! 📢
+                    </div>
+                </div>
+            </a>
+    </section>
+  <main class="testimonial-container" id="testimonialContainer">
+    <!-- Reviews will load here from JS -->
+  </main>
+
+  <section class="testimonial-form">
+    <h2>📝 Leave a Review</h2>
+    <form id="reviewForm">
+      <input type="text" id="name" placeholder="Your Name" required />
+      <textarea id="message" placeholder="Your Review..." required></textarea>
+      <select id="rating">
+        <option value="5">⭐⭐⭐⭐⭐ Excellent</option>
+        <option value="4">⭐⭐⭐⭐ Great</option>
+        <option value="3">⭐⭐⭐ Good</option>
+        <option value="2">⭐⭐ Fair</option>
+        <option value="1">⭐ Poor</option>
+      </select>
+      <button type="submit">Submit Review</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Mickey Valentino Fashion House</p>
+  </footer>
+
+  <script src="testimonialscript.js"></script>
+</body>
+</html>
